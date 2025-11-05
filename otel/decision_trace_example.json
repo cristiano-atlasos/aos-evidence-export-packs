@@ -1,0 +1,29 @@
+{
+"resource": {
+"service.name": "aos-control-plane",
+"service.version": "0.1",
+"deployment.environment": "sandbox"
+},
+"logRecord": {
+"timeUnixNano": "1730805933000000000",
+"severityText": "INFO",
+"body": {
+"type": "decision_trace",
+"trace_id": "5f3a1c88-7d5c-4f6f-9b35-6b3d1e9a8c41",
+"episode_id": "ap-invoice-2025-11-05",
+"agent": {"name": "ap-agent", "role": "operator"},
+"action": "invoice_approve",
+"resource": {"kind": "invoice", "id": "INV-1342"},
+"policy_evaluations": [
+{"gate": "finance-approve", "result": "approve", "reason": "threshold_ok"},
+{"gate": "high-risk-write", "result": "allow"}
+],
+"result": "approved",
+"inputs_redacted": {"amount_cents": 542033, "currency": "USD", "vendor_id": "V-1342"}
+},
+"attributes": {
+"aos.slo.p95_eval_ms": 245,
+"aos.trace.hash": "sha256:1a2b..."
+}
+}
+}
